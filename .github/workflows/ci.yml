@@ -18,4 +18,4 @@ jobs:
     - name: Run tests
       run: |
         chromedriver &
-        python -m pytest wg_gesucht_updater.py
+        python -m wg_gesucht_updater.py
