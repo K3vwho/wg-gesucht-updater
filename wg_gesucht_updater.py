@@ -27,14 +27,11 @@ for i in range(loops):
     password_field.send_keys(conf['password'])
 
     # Submit the login form
-
-    # <input id = "login_submit" class = "btn btn-block wgg_orange" type = "submit" value = "Login" tabindex = "29" onclick = "ga('send', 'event', 'Buttons', 'login', 'Login-Popup');" >
     login_button = driver.find_element("id", "login_submit")
-    # login_button = driver.find_element("xpath", "//button[@type='submit']")
     login_button.click()
+    time.sleep(2)
 
     # Navigate to the page for managing your ads
-    time.sleep(2)
     # Find the ad that you want to update and click the edit button
     driver.get(
         "https://www.wg-gesucht.de/angebot-bearbeiten.html?action=update_offer&offer_id=" + str(conf['ad_id']))
